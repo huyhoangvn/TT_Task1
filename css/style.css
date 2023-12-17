@@ -178,6 +178,15 @@ main.container{
     margin-left: 10px;
 }
 
+.contacts>.link>a{
+    text-decoration: none;
+    color: #444446;
+}
+
+.contacts>.link>a:hover{
+    color: blue;
+}
+
 .contacts img{
     width: 16px;
     height: 16px;
