@@ -13,9 +13,11 @@
 body{
     width: 768px;
     height: 303px;
-    margin: 0px auto;
+    margin: 5px auto;
     padding: 0px;
-    background-color: gray;
+    /* background-color: gray; */
+    box-shadow: 0px 0px 5px #737376;
+    color: #444446;
 }
 
 @font-face {
@@ -33,6 +35,7 @@ body{
 }
 
 main.container{
+    position: relative;
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -42,8 +45,8 @@ main.container{
 }
 
 /* Background */
-main.container>.bg{
-    position: relative;
+.bg{
+    position: absolute;
     width: 100%;
     height: 100%;
 }
@@ -63,5 +66,146 @@ main.container>.bg{
     height: 100%;
     object-fit: cover;
     right: 0;
+}
+
+/* Details */
+.contents-container{
+    position: absolute;
+    width: 75%;
+    height: 100%;
+}
+
+.sale-button{
+    position: absolute;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    background: #3ab44c;
+    top: calc(50% - 50px);
+    border: 4px solid #fff;
+    font-size: larger;
+    text-transform: capitalize;
+    right: 0;
+}
+
+.infos-container{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Detail - logo */
+.logo{
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+.logo>img{
+    width: 50px;
+    opacity: 0.7;
+}
+
+.logo>p{
+    font-size: small;
+    color: #3ab44c;
+}
+
+/* Detail - infos */
+.infos{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    float: left;
+}
+
+.decor{
+    display: flex;
+    position: absolute;
+    font-family: 'DecoText';
+    color: #3ab44c;
+    font-weight: 500;
+    font-size: xx-large;
+    top: -32px;
+    left: 6px;
+}
+
+.title{
+    display: inline;
+    position: relative;
+    text-align: start;
+    font-size: 60px;
+    line-height: 50px;
+}
+
+.description{
+    display: flex;
+    text-align: start;
+    font-size: x-small;
+    color: #737376;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.contacts{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+.contacts>.phone{
+    display: flex;
+    align-items: center;
+}
+
+.contacts>.link{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.contacts img{
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+/* Book-now */
+.book-now{
+    position: absolute;
+    z-index: auto;
+    bottom: 13%;
+    right: 5%;
+}
+
+.book-now>a{
+    text-decoration: none;
+    color: #3ab44c;
+    font-family: monospace;
+    font-weight: 600;
+    background-color: #fff;
+    padding: 2px 10px 2px 10px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 2px 2px 5px #00000094;
+}
+
+.book-now>a:hover{
+    background-color: #3ab44c;
+    color: #fff;
 }
 
